@@ -62,6 +62,6 @@ def login_user(request):
     return render(request, 'templates/login.html', context)
 def base(request):
     return render(request, 'templates/base.html')
-def logout(request):
+def signout(request):
     logout(request)
     return redirect('login')
