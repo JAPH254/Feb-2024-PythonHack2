@@ -1,6 +1,6 @@
 {% extends "templates/base.html"%}
 {% block content %}
-<div class="container bg-success">
+<div class="container bg-success rounded">
     <div class="row">
       <h1 class="text-center text-white">Weather App</h1>
     </div>
@@ -12,34 +12,41 @@
           id="location"
           name="location"
           placeholder="City, Country"
-          class="form-control"
+          class="rounded"
         />
         <button type="submit" class="btn btn-secondary">Get Weather</button>
         <!-- use my location -->
         <button type="button" class="btn btn-secondary">
-          Use My Location
+          clear
         </button>
       </form>
     </div>
     {% if data %}
     <div class="row">
       <div class="col-6">
-        <h2 class="bg-light shadow rounded  text-center text-success p-1">Weather for {{ data.location.name }}</h2>
-        <p>
+        <h2 class="bg-light shadow rounded  text-center text-success p-1 m-1">Weather for {{ data.location.name }}</h2>
+        <p class="bg-secondary rounded text-center">
           {{data.location.name}} is Located in {{data.location.region}} Region
           of {{data.location.country}} in {{data.location.tz_id}}
         </p>
-        
+      
+        <p class="bg-secondary rounded  text-center">Explore through the weather pattern of {{data.location.region}}. Make proper travelling or farming decisions based on the weather condition outcome.</p>
+          <span class="bg-info p-1 text-center rounded">Feeling like tired or bored? <a href="{% url 'jokes' %}">Lough</a> with me &#128512; </span>
+          
       </div>
       <div class="col-6">
-        <img src="{{data.current.condition.icon}}" width="" alt="" />
-        <p> The Weather condition is {{data.current.condition.text}}</p>
-        <p> The Temperature is {{data.current.temp_c}}°C</p>
-        <p> The Wind Speed is {{data.current.wind_kph}} km/h</p>
+        <img src="{{data.current.condition.icon}}" class="" width="" alt="" />
+        <h2 class="text-info">{{data.current.condition.text}}</h2>
+        <p class="bg-secondary rounded text-light "> The Weather condition is {{data.current.condition.text}}</p>
+        <p class="bg-secondary rounded text-light"> The Temperature is {{data.current.temp_c}}°C</p>
+        <p class="bg-secondary rounded text-light"> The Wind Speed is {{data.current.wind_kph}} km/h</p>
+        <p class="bg-secondary rounded text-light"> The Wind Direction is {{data.current.wind_dir}}</p>
+        <p class="bg-secondary rounded text-light"> The Humidity is {{data.current.humidity}}%</p>
+        <p class="bg-secondary rounded text-light"> The Precipitation is {{data.current.precip_mm}} mm</p>
       </div>
 
       {% else %}
-      <p>{{ error }}</p>
+      <p class="text-danger">{{ error }}</p>
     </div>
     {% endif %}
 </div>

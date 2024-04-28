@@ -22,9 +22,9 @@
       <div class="container bg-primary rounded mt-2 p-1">
         <div class="row">
           <h3 class="text-center text-white">Simple API fetch Hub</h3>
-          <p class="text-center">
+          <p class="text-center bg-info col-6 m-5 rounded text-white">
             Explore the Weather data Globally, and if you feel like you are
-            tired, Lough with me in the jokes section
+            tired, Lough with me at the jokes section
           </p>
         </div>
 
@@ -48,7 +48,7 @@
                 d="M7.053 11.276A.5.5 0 0 1 7.5 11h1a.5.5 0 0 1 .474.658l-.28.842H9.5a.5.5 0 0 1 .39.812l-2 2.5a.5.5 0 0 1-.875-.433L7.36 14H6.5a.5.5 0 0 1-.447-.724zm6.352-7.249a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 10H13a3 3 0 0 0 .405-5.973"
               />
             </svg>
-            <a href="{% url 'home' %}" class="text-dark">Weather App</a>
+            <a href="{% url 'home' %}" class="text-light btn btn-success">Weather App</a>
           </div>
           <div
             class="col-3 d-grid"
@@ -66,7 +66,7 @@
                 d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5M4.285 9.567a.5.5 0 0 1 .683.183A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683M10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8"
               />
             </svg>
-            <a href="{% url 'jokes' %}" class="text-dark">Fetch a joke</a>
+            <a href="{% url 'jokes' %}" class="text-light  btn btn-success">Fetch a joke</a>
           </div>
           <div
             class="col-6 d-grid"
@@ -79,8 +79,8 @@
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="25"
+              height="25"
               fill="currentColor"
               class="bi bi-power"
               viewBox="0 0 16 16"
@@ -90,7 +90,7 @@
                 d="M3 8.812a5 5 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812"
               />
             </svg>
-            <a href="{% url 'logout' %}" class="text-danger">Logout</a>
+            <a href="{% url 'logout' %}" class="text-light btn btn-danger">Logout</a>
           </div>
         </div>
       </div>
