@@ -24,7 +24,7 @@
     {% if data %}
     <div class="row">
       <div class="col-6">
-        <h2>Weather for {{ data.location.name }}</h2>
+        <h2 class="bg-light shadow rounded  text-center text-success p-1">Weather for {{ data.location.name }}</h2>
         <p>
           {{data.location.name}} is Located in {{data.location.region}} Region
           of {{data.location.country}} in {{data.location.tz_id}}
